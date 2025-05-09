@@ -4,90 +4,42 @@
   <title>Landing Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-   /* General reset for margin and padding */
-* {
+   /* Base styles for mobile-first approach */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Apply a basic responsive layout */
-body {
-  font-family: Arial, sans-serif;
+.container {
+  width: 100%;
+  padding: 10px;
 }
 
-/* For mobile screens, typically below 768px */
-@media (max-width: 768px) {
+.header, .footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
 
-  /* Remove excessive space between sections */
-  section {
-    padding: 20px;
-    margin-bottom: 15px; /* Reduce space between sections */
-  }
-
-  /* Make navigation more mobile-friendly */
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav a {
-    padding: 10px;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  /* Make images responsive */
-  img {
-    width: 100%; /* Allow images to scale with the screen size */
-    height: auto;
-  }
-
-  /* Adjust text size for smaller screens */
-  h1, h2, h3 {
-    font-size: 1.2rem; /* Smaller text for headings */
-  }
-
-  p {
-    font-size: 0.9rem; /* Adjust paragraph text size */
-  }
-
-  /* Adjust the layout of columns for smaller devices */
-  .about-content, .services-content {
-    display: block; /* Stack the content vertically on mobile */
-    text-align: center;
-  }
-
-  .service-card {
-    margin-bottom: 20px; /* Reduce space between service cards */
-  }
-
-  /* Adjust any excessive padding or margins */
+/* Styles for tablets and larger devices */
+@media (min-width: 768px) {
   .container {
-    padding: 10px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .header, .footer {
+    padding: 20px;
   }
 }
 
-/* For very small screens (like phones) */
-@media (max-width: 480px) {
-  /* Adjust text size further for smaller devices */
-  h1, h2, h3 {
-    font-size: 1rem;
-  }
-
-  p {
-    font-size: 0.8rem;
-  }
-
-  /* Ensure buttons are easy to tap on small screens */
-  button {
-    padding: 12px 25px;
-    font-size: 16px;
+/* Styles for desktops */
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
   }
 }
-
     html {
         scroll-behavior: smooth;
     }
@@ -118,7 +70,7 @@ body {
   background-color: black;
   color: white;
   text-align: center;
-  height:100vh;
+  /*height:100vh;*/
 }
 .section-title {
   font-size: 50px;
@@ -166,7 +118,7 @@ body {
   display: flex;
   justify-content: space-between; /* Distribute columns evenly */
   padding: 10px;
-  height:100vh;
+ /* height:100vh;*/
 }
 
 /* Column style */
@@ -220,7 +172,7 @@ body {
   background-color:#222;
   color:#f1f1f1;
   text-align: center;
-  height:100vh;
+ /* height:100vh;*/
 }
 
 .education-section h1 {
@@ -303,7 +255,7 @@ body {
       display: grid;
       grid-template-columns: 1fr 2fr;
       padding: 100px;
-      height: 100vh;
+     /* height: 100vh;*/
     }
     .content {
       background-color:black;
@@ -315,7 +267,7 @@ body {
       display: flex;
       justify-content: space-between;
       padding: 100px;
-      height: 100vh;
+      /*height: 100vh;*/
     }
     .btn:hover {
       color: black;
@@ -345,6 +297,7 @@ body {
   background-color:#333;
   padding: 60px 20px;
   color:#f1f1f1;
+      /*height:100vh;*/
 }
 
 .contact-container {
