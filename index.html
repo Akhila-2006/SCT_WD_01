@@ -4,23 +4,90 @@
   <title>Landing Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    @media (max-width: 768px) {
-  .home-section {
+   /* General reset for margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply a basic responsive layout */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* For mobile screens, typically below 768px */
+@media (max-width: 768px) {
+
+  /* Remove excessive space between sections */
+  section {
+    padding: 20px;
+    margin-bottom: 15px; /* Reduce space between sections */
+  }
+
+  /* Make navigation more mobile-friendly */
+  nav {
+    display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 16px;
     text-align: center;
-    padding: 50px 20px;
   }
 
-  .photo img {
-    width: 250px;
-    margin-top: 30px;
+  /* Make images responsive */
+  img {
+    width: 100%; /* Allow images to scale with the screen size */
+    height: auto;
   }
 
-  .btn {
-    width: 60%;
+  /* Adjust text size for smaller screens */
+  h1, h2, h3 {
+    font-size: 1.2rem; /* Smaller text for headings */
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust paragraph text size */
+  }
+
+  /* Adjust the layout of columns for smaller devices */
+  .about-content, .services-content {
+    display: block; /* Stack the content vertically on mobile */
+    text-align: center;
+  }
+
+  .service-card {
+    margin-bottom: 20px; /* Reduce space between service cards */
+  }
+
+  /* Adjust any excessive padding or margins */
+  .container {
+    padding: 10px;
+    width: 100%;
   }
 }
+
+/* For very small screens (like phones) */
+@media (max-width: 480px) {
+  /* Adjust text size further for smaller devices */
+  h1, h2, h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  /* Ensure buttons are easy to tap on small screens */
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+
     html {
         scroll-behavior: smooth;
     }
